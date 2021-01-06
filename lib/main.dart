@@ -34,6 +34,7 @@ class _SIFormState extends State<SIForm> {
 
   var _currentItemSelected = '';
   var _selectedCreditLoad = '';
+  int sum = 0 ; 
 
   @override
   void initState() {
@@ -159,6 +160,7 @@ class _SIFormState extends State<SIForm> {
 
                       onPressed: () {
                         setState(() {
+                          sum ++;
                         });
                       },
                     ),
@@ -178,9 +180,9 @@ class _SIFormState extends State<SIForm> {
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
-          // Add your onPressed code here!
+          
         },
-        child: Icon(Icons.navigation),
+        child: Icon(sum),
         backgroundColor: Colors.green,
       ),
     );
